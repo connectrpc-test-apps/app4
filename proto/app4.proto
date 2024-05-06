@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package app4.v1;
+
+service CodeValidator {
+  rpc ValidateCode(CodeValidateRequest) returns (CodeValidateResponse);
+}
+
+message CodeValidateRequest {
+  string code = 1;
+}
+message CodeValidateResponse {
+  bool valid = 1;
+}
